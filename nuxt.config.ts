@@ -7,6 +7,11 @@ export default defineNuxtConfig({
     '@nuxt/test-utils'
   ],
 
+  // Remove autoPrefix from component imports
+  components: {
+    dirs: [{ path: '~/components', pathPrefix: false }]
+  },
+
   devtools: {
     enabled: true
   },
@@ -18,6 +23,16 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-15',
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "~/assets/scss/main.scss";'
+        }
+      }
+    }
+  },
 
   eslint: {
     config: {
