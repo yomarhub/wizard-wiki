@@ -33,7 +33,7 @@ useSeoMeta({
           <AppLogo class="w-auto h-6 shrink-0" />
         </NuxtLink>
 
-        <TemplateMenu />
+        <!-- <TemplateMenu /> -->
       </template>
 
       <template #right>
