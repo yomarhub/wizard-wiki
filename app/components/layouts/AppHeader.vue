@@ -1,9 +1,10 @@
 <template>
   <UHeader>
     <template #left>
-      <NuxtLink to="/" class="flex items-center">
-        <AppLogo />
-      </NuxtLink>
+      <NuxtLink to="/" class="flex items-center"><AppLogo /></NuxtLink>
+      <NuxtLink to="/" class="ml-4 text-lg font-semibold">Harry Potter Wiki</NuxtLink>
+      <HeaderButton to="/articles" label="Articles" />
+      <HeaderButton to="/characters" label="Characters" />
     </template>
 
     <template #right>
