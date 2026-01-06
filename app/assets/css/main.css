@@ -4,6 +4,36 @@
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
 
+  --ui-primary: #641e1e;
+  --ui-secondary: #c39a1c;
+  --ui-tertiary: #3d2f22;
+  --color-grey: #717679;
+  --color-white: #efeee9;
+
+  --color-grey-50: #f9fafb;
+  --color-grey-100: #f3f4f6;
+  --color-grey-200: #e5e7eb;
+  --color-grey-300: #d1d5db;
+  --color-grey-400: #9ca3af;
+  --color-grey-500: #717679;
+  --color-grey-600: #4b5563;
+  --color-grey-700: #374151;
+  --color-grey-800: #1f2937;
+  --color-grey-900: #111827;
+  --color-grey-950: #030712;
+
+  --color-white-50: #ffffff;
+  --color-white-100: #fefefe;
+  --color-white-200: #fcfcfb;
+  --color-white-300: #f7f7f5;
+  --color-white-400: #f3f3ef;
+  --color-white-500: #efeee9;
+  --color-white-600: #d5d4cf;
+  --color-white-700: #a8a7a3;
+  --color-white-800: #7b7a77;
+  --color-white-900: #4e4d4b;
+  --color-white-950: #272625;
+
   --color-green-50: #EFFDF5;
   --color-green-100: #D9FBE8;
   --color-green-200: #B3F5D1;

@@ -9,8 +9,9 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'default'
+  layout: 'grid'
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
