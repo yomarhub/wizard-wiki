@@ -1,6 +1,4 @@
 {
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
   "files.associations": {
     "*.css": "tailwindcss"
   },
@@ -16,5 +14,6 @@
       "ui:\\s*{([^)]*)\\s*}",
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
-  ]
+  ],
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false
 }
