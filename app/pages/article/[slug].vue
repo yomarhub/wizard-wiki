@@ -1,5 +1,6 @@
 <template>
   <article v-if="article">
+    <NuxtLink to="/articles" class="text-blue-600 underline mb-4 inline-block">← Back to articles</NuxtLink>
     <h1>{{ article.title }}</h1>
     <p>{{ article.text }}</p>
   </article>
