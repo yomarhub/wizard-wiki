@@ -4,7 +4,9 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/image',
-    '@nuxt/test-utils'
+    '@nuxt/test-utils',
+    '@vee-validate/nuxt',
+    '@nuxtjs/i18n'
   ],
 
   // Remove autoPrefix from component imports
@@ -17,6 +19,12 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+
+  runtimeConfig: {
+    public: {
+      API_BASE_URL: 'https://hp-api.onrender.com/api'
+    }
+  },
 
   routeRules: {
     '/': { prerender: true }
@@ -42,5 +50,17 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  i18n: {
+    lazy: true,
+    types: 'composition',
+    langDir: 'locales/',
+    strategy: 'no_prefix',
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', files: ['en/common.json', 'en/index.json'], name: 'English' },
+      { code: 'fr', files: [], name: 'Français' }
+    ]
   }
 })
