@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center items-center w-full h-screen">
-    <UMain class="bg-blue-800 min-h-fit">
+  <div class="flex justify-center items-center min-h-screen">
+    <UMain class="bg-blue-800 size-full">
       <slot />
     </UMain>
   </div>

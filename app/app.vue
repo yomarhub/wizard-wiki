@@ -23,6 +23,8 @@ useSeoMeta({
   twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
   twitterCard: 'summary_large_image'
 })
+const { setLocale } = useI18n()
+setLocale('fr')
 </script>
 
 <template>

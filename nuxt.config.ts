@@ -1,13 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui',
-    '@nuxt/image',
-    '@nuxt/test-utils',
-    '@vee-validate/nuxt',
-    '@nuxtjs/i18n'
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image', '@nuxt/test-utils', '@vee-validate/nuxt', '@nuxtjs/i18n', '@pinia/nuxt'],
 
   // Remove autoPrefix from component imports
   components: {
@@ -59,8 +52,8 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     defaultLocale: 'en',
     locales: [
-      { code: 'en', files: ['en/common.json', 'en/index.json'], name: 'English' },
-      { code: 'fr', files: ['en/common.json'], name: 'Français' }
+      { code: 'en', files: ['en/common.json', 'en/index.json', 'en/sidebar.json', 'en/characters.json'], name: 'English' },
+      { code: 'fr', files: ['fr/common.json', 'fr/index.json', 'fr/sidebar.json', 'fr/characters.json'], name: 'Français' }
     ]
   }
 })

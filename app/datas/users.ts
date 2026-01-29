@@ -1,0 +1,22 @@
+export const users: Array<User> = [
+  { id: 0, email: 'harry.potter@hogwarts.edu', username: 'HarryP', password: 'easypassword' },
+  { id: 1, email: 'hermione.granger@hogwarts.edu', username: 'HermioneG', password: 'leviosaa' },
+  { id: 2, email: 'ron.weasley@hogwarts.edu', username: 'RonWeasley', password: 'scabbers' },
+  { id: 3, email: 'luna.lovegood@hogwarts.edu', username: 'LunaLovegood', password: 'nargles' },
+  { id: 4, email: 'neville.longbottom@hogwarts.edu', username: 'NevilleLB', password: 'remembrall' },
+  { id: 5, email: 'draco.malfoy@hogwarts.edu', username: 'DracoM', password: 'slytherin' },
+  { id: 6, email: 'ginny.weasley@hogwarts.edu', username: 'GinnyW', password: 'quidditch' },
+  { id: 7, email: 'fred.weasley@hogwarts.edu', username: 'FredWeasley', password: 'mischief' },
+  { id: 8, email: 'george.weasley@hogwarts.edu', username: 'GeorgeW', password: 'managed' },
+  { id: 9, email: 'cho.chang@hogwarts.edu', username: 'ChoChang', password: 'ravenclaw' },
+  { id: 10, email: 'cedric.diggory@hogwarts.edu', username: 'CedricD', password: 'hufflepuff' },
+  { id: 11, email: 'dean.thomas@hogwarts.edu', username: 'DeanThomas', password: 'gryffindor' },
+  { id: 12, email: 'seamus.finnigan@hogwarts.edu', username: 'SeamusF', password: 'explosions' },
+  { id: 13, email: 'lavender.brown@hogwarts.edu', username: 'LavenderB', password: 'wonwon' },
+  { id: 14, email: 'parvati.patil@hogwarts.edu', username: 'ParvatiP', password: 'divination' },
+  { id: 15, email: 'padma.patil@hogwarts.edu', username: 'PadmaP', password: 'yuletide' },
+  { id: 16, email: 'oliver.wood@hogwarts.edu', username: 'OliverWood', password: 'keeper' },
+  { id: 17, email: 'katie.bell@hogwarts.edu', username: 'KatieBell', password: 'chaser' },
+  { id: 18, email: 'colin.creevey@hogwarts.edu', username: 'ColinC', password: 'camera' },
+  { id: 19, email: 'hannah.abbott@hogwarts.edu', username: 'HannahA', password: 'badgers' }
+]

@@ -1,0 +1,20 @@
+export const messages: Array<ChatMessage> = [
+  { id: 0, userId: 0, message: 'Welcome to the Wizard Wiki!' },
+  { id: 1, userId: 1, message: 'Has anyone seen my Remembrall?' },
+  { id: 2, userId: 2, message: 'The Quidditch match was incredible!' },
+  { id: 3, userId: 3, message: 'I just learned Expecto Patronum!' },
+  { id: 4, userId: 4, message: 'Does anyone know where the Room of Requirement is?' },
+  { id: 5, userId: 5, message: 'Studying for my O.W.L.s, any tips?' },
+  { id: 6, userId: 6, message: 'The new Defense Against the Dark Arts professor is amazing' },
+  { id: 7, userId: 7, message: 'Just visited Hogsmeade, got some Butterbeer!' },
+  { id: 8, userId: 8, message: 'Anyone want to trade Chocolate Frog cards?' },
+  { id: 9, userId: 9, message: 'The Marauder\'s Map is showing something strange...' },
+  { id: 10, userId: 10, message: 'Herbology homework is killing me' },
+  { id: 11, userId: 11, message: 'Peeves struck again in the corridor!' },
+  { id: 12, userId: 12, message: 'My wand just chose me at Ollivanders!' },
+  { id: 13, userId: 13, message: 'The house cup competition is heating up' },
+  { id: 14, userId: 14, message: 'Anyone seen the latest Daily Prophet?' },
+  { id: 15, userId: 15, message: 'Trying to master the Patronus charm' },
+  { id: 16, userId: 16, message: 'The library has some fascinating books on ancient runes' },
+  { id: 17, userId: 17, message: 'Care of Magical Creatures class was wild today!' }
+]
