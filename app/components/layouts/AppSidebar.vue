@@ -1,25 +1,30 @@
 <template>
   <section class="flex flex-col p-3 bg-orange-400 text-purple-600">
-    <input id="bHasImage" v-model="hasImage" class="size-3.5" type="checkbox" name="hasImage" />
-    <label for="hasImage" class="pl-2">Filter Images</label>
+    <!-- Old Input Has Image -->
+    <!-- <input id="bHasImage" class="size-3.5" type="checkbox" name="hasImage" /> -->
+    <!-- <label for="hasImage" class="pl-2">Filter Images</label> -->
+    <!-- End Old Filter Has Image -->
+
     <template v-for="field in fields" :key="field">
-      <UToggle v-if="!Array.isArray(values[field]) && values[field] === 'isBoolean'" class="ml-4" :label="'Select Character ' + field" />
-      <USelect v-else class="ml-4" :items="(values as never)[field]" value-key="value" :placeholder="'Select Character ' + field" />
+      <UCheckbox v-if="isBooleanArray(values[field]) || isButton(field)" v-model="filters[field] as boolean" class="ml-4" :label="`Select if ${capitalize(field)}`" />
+      <UInput v-else-if="isInput(field)" v-model="filters[field] as AcceptableValue" class="ml-4" :placeholder="values[field] ? values[field][0] as string : capitalize(field)" />
+      <USelect v-else-if="isValid(field)" v-model="filters[field]" class="ml-4" :items="(values as never)[field]" :placeholder="`Select ${field}`" />
     </template>
-    <!-- <select v-for="field in fields" :key="field" class="ml-4" :placeholder="'Select Character ' + field">
-      <option :value="field" selected disabled hidden>{{ 'Select Character ' + field }}</option>
-      <option v-for="item in values[field]" :key="item" :value="item">{{ item }}</option>
-    </select> -->
+    <UButton class="mt-4 bg-red-500 text-white" @click="clearFilters()">Clear Filters</UButton>
   </section>
 </template>
 
 <script setup lang="ts">
+import type { AcceptableValue } from '@nuxt/ui'
 import values from '~/datas/charactersValues'
 
-const { hasImage } = useCharacterFilter()
-const { data } = await useCharacters()
+const { filters, clearFilters } = useCharacterFilter() as unknown as { filters: Record<string, unknown>, clearFilters: () => void }
 
-const fields = computed(() => (data.value[0] ? Object.keys(data.value[0]).slice(1) : []))
+const fields = Object.keys(values) as Array<keyof typeof values>
+const isBooleanArray = (arr: unknown[] | undefined): boolean => Array.isArray(arr) && arr.every(v => typeof v === 'boolean')
+const isIgnored = (field: string): boolean => [''].includes(field)
+const isInput = (field: string): boolean => ['name', 'alternate_names'].includes(field)
+const isButton = (field: string): boolean => ['image'].includes(field)
+const isValid = (field: string): boolean => !isIgnored(field) && Array.isArray(values[field]) && values[field].length > 0
+const capitalize = (s: string): string => s.charAt(0).toUpperCase() + s.slice(1)
 </script>
-
-<style scoped></style>
