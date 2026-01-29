@@ -5,20 +5,20 @@
   --font-sans: "Public Sans", sans-serif;
 
   --color-gryffindor-red: #641e1e;
-  --color-wizard-gold: #c39a1c;
+  --color-wizard-gold: #d4a574;
   --color-ink-tertiary: #3d2f22;
 
-  --ui-color-primary-50: #fef2f2;
-  --ui-color-primary-100: #fee2e2;
-  --ui-color-primary-200: #fecaca;
-  --ui-color-primary-300: #fca5a5;
-  --ui-color-primary-400: #f87171;
-  --ui-color-primary-500: var(--color-gryffindor-red);
-  --ui-color-primary-600: #4a1616;
-  --ui-color-primary-700: #3b1111;
-  --ui-color-primary-800: #2d0d0d;
-  --ui-color-primary-900: #1f0909;
-  --ui-color-primary-950: #0f0404;
+  --ui-color-primary-50: #fefaf5;
+  --ui-color-primary-100: #fef5eb;
+  --ui-color-primary-200: #fde8cd;
+  --ui-color-primary-300: #fbd9ae;
+  --ui-color-primary-400: #f8c571;
+  --ui-color-primary-500: var(--color-wizard-gold);
+  --ui-color-primary-600: #b8905f;
+  --ui-color-primary-700: #9c7b4f;
+  --ui-color-primary-800: #7a623f;
+  --ui-color-primary-900: #5e4d31;
+  --ui-color-primary-950: #2f2618;
 
   --ui-color-neutral-50: var(--color-white-50);
   --ui-color-neutral-400: var(--color-grey-400);
@@ -47,7 +47,7 @@
 @theme static {
   --font-sans: "Public Sans", sans-serif;
 
-  --ui-primary: var(--color-gryffindor-red);
+  --ui-primary: var(--color-yellow-600);
   --ui-secondary: var(--color-wizard-gold);
   --ui-tertiary: var(--color-ink-tertiary);
 

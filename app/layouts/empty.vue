@@ -1,13 +1,10 @@
 <template>
-  <div class="flex justify-center items-center min-h-screen">
-    <UMain class="bg-blue-800 size-full">
-      <slot />
-    </UMain>
-  </div>
+  <UMain class="bg-[#0B101B] flex items-center justify-center min-h-screen">
+    <slot />
+  </UMain>
 </template>
 
 <script setup lang="ts">
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
