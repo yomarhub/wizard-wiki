@@ -27,10 +27,7 @@
     </div>
     <div class="mt-auto">
       <slot name="bottom">
-        <div class="flex items-center gap-4 text-secondary">
-          <AuthButton />
-          <NuxtLink to="/login">{{ $t('sidebar.buttons.login') }}</NuxtLink>
-        </div>
+        <AuthButton />
       </slot>
     </div>
   </div>
