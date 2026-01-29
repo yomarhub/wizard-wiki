@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'default'
+  layout: 'sidebar-chat'
 })
 </script>
 
