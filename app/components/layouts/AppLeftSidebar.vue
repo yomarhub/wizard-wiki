@@ -23,6 +23,12 @@
     </div>
     <div v-if="$slots['middle']">
       <slot name="middle">
+        <SidebarBlock v-if="route.path === '/characters'" title="filters">
+          <CharactersFilters />
+        </SidebarBlock>
+        <SidebarBlock v-else-if="route.path === '/spells'" title="filters">
+          <SpellsFilters />
+        </SidebarBlock>
       </slot>
     </div>
     <div class="mt-auto">
@@ -35,6 +41,7 @@
 
 <script setup lang="ts">
 const authStore = useAuthStore()
+const route = useRoute()
 </script>
 
 <style scoped></style>

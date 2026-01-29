@@ -1,6 +1,6 @@
 import { messages } from '~/datas/messages'
 import { users } from '~/datas/users'
-import type { Character, ChatMessage, User } from '~/utils/types'
+import type { Character, ChatMessage, Spell, User } from '~/utils/types'
 
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
@@ -39,9 +39,8 @@ export default defineNuxtPlugin(() => {
     const value = await $fetch(`${baseURL}/characters/house/${house}`)
     return { data: value }
   }
-  const getSpells = async () => {
-    const value = await $fetch(`${baseURL}/spells`)
-    return { data: value }
+  const getSpells = async (): Promise<Spell[]> => {
+    return await $fetch(`${baseURL}/spells`)
   }
 
   return {

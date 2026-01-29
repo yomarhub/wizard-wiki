@@ -6,7 +6,8 @@
       "characters":"Personnages",
       "spells":"Sorts",
       "daily-prophet":"Gazette du Sorcier",
-      "ministry-hub":"Centre du Ministère"
+      "ministry-hub":"Centre du Ministère",
+      "filters":"Filtres"
     },
     "chat": {
       "title": "Chat",

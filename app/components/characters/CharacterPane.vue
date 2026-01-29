@@ -56,4 +56,29 @@ li:not(:has(img)) {
 .char-card img {
   transition: transform 0.5s ease;
 }
+
+.house-gryffindor {
+  border-color: #740001;
+  color: #ae0001;
+}
+
+.house-slytherin {
+  border-color: #1a472a;
+  color: #2a623d;
+}
+
+.house-ravenclaw {
+  border-color: #0e1a40;
+  color: #222f5b;
+}
+
+.house-hufflepuff {
+  border-color: #ecb939;
+  color: #f0c75e;
+}
+
+.char-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.3);
+}
 </style>
