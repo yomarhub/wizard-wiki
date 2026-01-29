@@ -12,6 +12,7 @@
       "title": "Chat",
       "aria-label": "Envoyer le message",
       "placeholder": "Tapez votre message...",
+      "placeholder-disabled": "Connectez-vous pour envoyer des messages...",
       "send-button": "Envoyer"
     },
     "buttons": {

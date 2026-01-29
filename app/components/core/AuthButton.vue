@@ -24,7 +24,7 @@ const authStore = useAuthStore()
 
 const handleLogout = async () => {
   authStore.logout()
-  await navigateTo('/login')
+  // await navigateTo('/login')
 }
 
 const userMenuItems = computed((): DropdownMenuItem[][] => [

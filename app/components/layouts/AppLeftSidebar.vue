@@ -16,7 +16,7 @@
             <NavButton to="/characters" icon="👥">{{ $t('sidebar.category.characters') }}</NavButton>
             <NavButton to="/spells" icon="🪄">{{ $t('sidebar.category.spells') }}</NavButton>
             <NavButton to="/articles" icon="📜">{{ $t('sidebar.category.daily-prophet') }}</NavButton>
-            <NavButton to="/dashboard" icon="🏰">{{ $t('sidebar.category.ministry-hub') }}</NavButton>
+            <NavButton v-if="authStore.isAdmin" to="/dashboard" icon="🏰">{{ $t('sidebar.category.ministry-hub') }}</NavButton>
           </nav>
         </SidebarBlock>
       </slot>
@@ -34,6 +34,7 @@
 </template>
 
 <script setup lang="ts">
+const authStore = useAuthStore()
 </script>
 
 <style scoped></style>

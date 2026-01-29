@@ -12,6 +12,7 @@
       "title": "Chat",
       "aria-label": "Send message",
       "placeholder": "Type your message...",
+      "placeholder-disabled": "Login to send messages...",
       "send-button": "Send"
     },
     "buttons": {
