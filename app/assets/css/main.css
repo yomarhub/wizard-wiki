@@ -2,13 +2,60 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: "Public Sans", sans-serif;
 
-  --ui-primary: #641e1e;
-  --ui-secondary: #c39a1c;
-  --ui-tertiary: #3d2f22;
-  --color-grey: #717679;
-  --color-white: #efeee9;
+  --color-gryffindor-red: #641e1e;
+  --color-wizard-gold: #c39a1c;
+  --color-ink-tertiary: #3d2f22;
+
+  --ui-color-primary-50: #fef2f2;
+  --ui-color-primary-100: #fee2e2;
+  --ui-color-primary-200: #fecaca;
+  --ui-color-primary-300: #fca5a5;
+  --ui-color-primary-400: #f87171;
+  --ui-color-primary-500: var(--color-gryffindor-red);
+  --ui-color-primary-600: #4a1616;
+  --ui-color-primary-700: #3b1111;
+  --ui-color-primary-800: #2d0d0d;
+  --ui-color-primary-900: #1f0909;
+  --ui-color-primary-950: #0f0404;
+
+  --ui-color-neutral-50: var(--color-white-50);
+  --ui-color-neutral-400: var(--color-grey-400);
+  --ui-color-neutral-500: var(--color-grey-500);
+  --ui-color-neutral-900: var(--color-white-900);
+  --ui-color-neutral-950: var(--color-white-950);
+
+  --color-grey-500: #717679;
+  --color-white-400: #f3f3ef;
+  --color-white-500: #efeee9;
+}
+
+@layer base {
+  /* Dynamic Backgrounds using your White/Grey scales */
+  :root {
+    --ui-bg: var(--color-white-400); /* Light: Parchment */
+    --ui-text: var(--color-ink-tertiary);
+  }
+
+  .dark {
+    --ui-bg: #0b101b; /* Dark: Ministry Blue */
+    --ui-text: var(--color-white-400);
+  }
+}
+
+@theme static {
+  --font-sans: "Public Sans", sans-serif;
+
+  --ui-primary: var(--color-gryffindor-red);
+  --ui-secondary: var(--color-wizard-gold);
+  --ui-tertiary: var(--color-ink-tertiary);
+
+  --color-app-bg: var(--app-bg);
+  --color-app-surface: var(--app-surface);
+  --color-app-border: var(--app-border);
+  --color-app-text: var(--app-text-main);
+  --color-app-text-dim: var(--app-text-dim);
 
   --color-grey-50: #f9fafb;
   --color-grey-100: #f3f4f6;
@@ -33,16 +80,4 @@
   --color-white-800: #7b7a77;
   --color-white-900: #4e4d4b;
   --color-white-950: #272625;
-
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
 }

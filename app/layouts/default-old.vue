@@ -1,8 +1,11 @@
 <template>
-  <div class="flex justify-center items-center min-h-screen">
-    <UMain class="bg-blue-800 size-full">
+  <div>
+    <AppHeader />
+    <UMain>
       <slot />
     </UMain>
+    <USeparator />
+    <AppFooter />
   </div>
 </template>
 

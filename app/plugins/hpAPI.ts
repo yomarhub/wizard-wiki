@@ -1,4 +1,6 @@
-import type { Character } from '~/utils/types'
+import { messages } from '~/datas/messages'
+import { users } from '~/datas/users'
+import type { Character, ChatMessage, User } from '~/utils/types'
 
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
@@ -11,6 +13,12 @@ export default defineNuxtPlugin(() => {
   // Find characters from a specific Hogwarts house: fetch(baseURL+'/api/characters/house/:house').then(r=>r.json())
   // Discover all magical spells and their incantations: fetch(baseURL+'/api/spells').then(r=>r.json())
 
+  const getUsers = async (): Promise<Array<User>> => {
+    return await Promise.resolve(users)
+  }
+  const getChatMessages = async (): Promise<Array<ChatMessage>> => {
+    return await Promise.resolve(messages)
+  }
   const getCharacters = async (): Promise<Array<Character>> => {
     return await $fetch(`${baseURL}/characters`)
   }
@@ -39,6 +47,8 @@ export default defineNuxtPlugin(() => {
   return {
     provide: {
       hpAPI: {
+        getUsers,
+        getChatMessages,
         getCharacters,
         getCharacterById,
         getStudents,

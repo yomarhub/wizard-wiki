@@ -1,0 +1,18 @@
+{
+  "sidebar": {
+    "category": {
+      "main-navigation": "Main Menu",
+      "overview": "Overview",
+      "characters":"Characters",
+      "spells":"Spells",
+      "daily-prophet":"Daily Prophet",
+      "ministry-hub":"Ministry Hub"
+    },
+    "chat": {
+      "title": "Chat",
+      "aria-label": "Send message",
+      "placeholder": "Type your message...",
+      "send-button": "Send"
+    }
+  }
+}

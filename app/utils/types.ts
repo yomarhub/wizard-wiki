@@ -34,5 +34,19 @@ export interface Spell {
   effect: string
 }
 
+export interface User {
+  id: number
+  role: 'USER' | 'ADMIN' | 'PROFESSIONAL'
+  email: string
+  username: string
+  password: string
+}
+
+export interface ChatMessage {
+  id: number
+  userId: number
+  message: string
+}
+
 export const toKeyed = <T>(obj: T, key: string) => obj[key as keyof T]
 export const toTyped = <T>(obj: T, key: keyof T): T[keyof T] => obj[key]

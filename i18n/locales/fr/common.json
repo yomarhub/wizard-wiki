@@ -1,0 +1,10 @@
+{
+  "common": {
+    "boolean": {
+      "true": "Vrai",
+      "false": "Faux",
+      "yes": "Oui",
+      "no": "Non"
+    }
+  }
+}
