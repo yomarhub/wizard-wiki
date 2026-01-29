@@ -21,14 +21,16 @@
         </SidebarBlock>
       </slot>
     </div>
-    <div>
+    <div v-if="$slots['middle']">
       <slot name="middle">
-        Some middle content
       </slot>
     </div>
     <div class="mt-auto">
       <slot name="bottom">
-        <div><AuthButton /><span>Login</span></div>
+        <div class="flex items-center gap-4 text-secondary">
+          <AuthButton />
+          <NuxtLink to="/login">{{ $t('sidebar.buttons.login') }}</NuxtLink>
+        </div>
       </slot>
     </div>
   </div>

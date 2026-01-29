@@ -13,6 +13,13 @@
       "aria-label": "Envoyer le message",
       "placeholder": "Tapez votre message...",
       "send-button": "Envoyer"
+    },
+    "buttons": {
+      "login": "Connexion",
+      "logout": "Déconnexion",
+      "signup": "S'inscrire",
+      "profile": "Profil",
+      "settings": "Paramètres"
     }
   }
 }
