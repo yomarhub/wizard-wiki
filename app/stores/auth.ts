@@ -1,4 +1,3 @@
-import { defineStore } from 'pinia'
 import { users } from '~/datas/users'
 
 export const useAuthStore = defineStore('auth', {
