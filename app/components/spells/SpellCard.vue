@@ -1,10 +1,7 @@
 <template>
   <div class="spell-glow bg-slate-900/50 border border-slate-800 p-6 rounded-2xl transition-all">
-    <h3 class="incantation font-serif text-xl mb-2 italic">{{ spell.spell }}</h3>
-    <p class="text-xs text-slate-400 leading-relaxed">{{ spell.effect }}</p>
-    <div class="mt-4 flex space-x-2">
-      <span class="text-[9px] bg-slate-800 px-2 py-1 rounded text-slate-500 uppercase font-bold tracking-tighter">{{ spell.type }}</span>
-    </div>
+    <h3 class="incantation font-serif text-xl mb-2 italic">{{ spell?.name }}</h3>
+    <p class="text-xs text-slate-400 leading-relaxed">{{ spell.description }}</p>
   </div>
 </template>
 

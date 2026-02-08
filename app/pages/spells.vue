@@ -16,21 +16,43 @@
 const { $hpAPI } = useNuxtApp()
 const { filters } = useSpellFilter()
 
-const { data: spells } = await useLazyAsyncData(
-  'spells',
-  () => $hpAPI.getSpells()
-)
+const { data: spells } = await useLazyAsyncData('spells', () => $hpAPI.getSpells())
 
 const filteredSpells = computed(() => spells.value?.filter((spell) => {
-  if (filters.value.spell && !spell.spell.toLowerCase().includes(filters.value.spell.toLowerCase())) {
+  if (filters.value.spell && !spell.name.toLowerCase().includes(filters.value.spell.toLowerCase())) {
     return false
   }
-  if (filters.value.type && spell.type !== filters.value.type) {
-    return false
-  }
-  if (filters.value.effect && !spell.effect.toLowerCase().includes(filters.value.effect.toLowerCase())) {
+  if (filters.value.effect && !spell.description.toLowerCase().includes(filters.value.effect.toLowerCase())) {
     return false
   }
   return true
 }))
+
+onMounted(() => {
+  if (spells.value) console.log('Filtered Spells:', spells.value)
+})
 </script>
+
+<style scoped>
+.font-serif {
+  font-family: 'Cinzel', serif;
+}
+
+.spell-glow:hover {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+}
+
+.incantation {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.unforgivable {
+  border-color: #ef4444 !important;
+}
+
+.unforgivable:hover {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+</style>

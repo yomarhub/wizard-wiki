@@ -29,9 +29,8 @@ export interface Character {
 
 export interface Spell {
   id: string
-  spell: string
-  type: string
-  effect: string
+  name: string
+  description: string
 }
 
 export interface User {
