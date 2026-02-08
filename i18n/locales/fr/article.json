@@ -1,0 +1,17 @@
+{
+  "article": {
+    "form": {
+      "title": "Titre de l'article",
+      "title-placeholder": "Entrez un titre captivant...",
+      "cover-label": "Image de couverture",
+      "content-label": "Contenu de l'article",
+      "characters-count": "aucun caractère | {n} caractère | {n} caractères",
+      "content": "Contenu de l'article",
+      "image": "Image de l'article",
+      "submit": {
+        "is-submitting": "Publication en cours...",
+        "publish": "Publier l'article"
+      }
+    }
+  }
+}

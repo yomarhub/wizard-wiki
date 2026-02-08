@@ -1,0 +1,17 @@
+{
+  "article": {
+    "form": {
+      "title": "Article Title",
+      "title-placeholder": "Enter a captivating title...",
+      "cover-label": "Cover Image",
+      "content-label": "Article Content",
+      "characters-count": "no character | {n} character | {n} characters",
+      "content": "Article Content",
+      "image": "Article Image",
+      "submit": {
+        "is-submitting": "Publishing...",
+        "publish": "Publish Article"
+      }
+    }
+  }
+}
