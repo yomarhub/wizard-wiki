@@ -10,6 +10,7 @@ const { $hpAPI } = useNuxtApp()
 
 const { data: messages } = useLazyAsyncData('chat-messages', () => $hpAPI.getChatMessages() || [], { deep: true, default: (): ChatMessage[] => [] })
 const send = async (message: Partial<ChatMessage>) => {
+  // Put logic to send message to backend here, e.g. via $hpAPI.sendChatMessage(message)
   messages.value.push({
     id: Math.max(...messages.value.map(m => m.id)) + 1,
     userId: message.userId || 0,

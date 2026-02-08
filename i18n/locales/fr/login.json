@@ -1,0 +1,17 @@
+{
+  "login": {
+    "title": "Déverrouiller les Archives",
+    "subtitle": "Identifiez-vous, Sorcier.",
+    "email": "Adresse email",
+    "password": "Mot de passe secret",
+    "button": {
+      "enter": "Entrer dans les Portes",
+      "connecting": "Authentification..."
+    },
+    "forgot": ["Vous avez oublié votre baguette ?", "Contactez Gringotts"],
+    "error": {
+      "failed": "Échec de l'authentification",
+      "invalid": "Identifiants invalides"
+    }
+  }
+}

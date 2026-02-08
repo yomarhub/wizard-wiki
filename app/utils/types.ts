@@ -38,7 +38,7 @@ export interface User {
   role: 'USER' | 'ADMIN' | 'PROFESSIONAL'
   email: string
   username: string
-  password: string
+  password?: string
 }
 
 export interface ChatMessage {

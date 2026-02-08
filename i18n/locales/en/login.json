@@ -1,0 +1,17 @@
+{
+  "login": {
+    "title": "Unlock the Archives",
+    "subtitle": "Identify yourself, Wizard.",
+    "email": "Email Address",
+    "password": "Secret Password",
+    "button": {
+      "enter": "Enter the Gates",
+      "connecting": "Authenticating..."
+    },
+    "forgot": ["Forgot your wand?", "Contact Gringotts"],
+    "error": {
+      "failed": "Authentication Failed",
+      "invalid": "Invalid credentials"
+    }
+  }
+}

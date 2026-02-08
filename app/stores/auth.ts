@@ -2,61 +2,42 @@ import { users } from '~/datas/users'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
-    user: null as User | null,
-    isAuthenticated: false
+    user: null as User | null
   }),
 
   getters: {
     currentUser: state => state.user,
     isAdmin: state => state.user?.role === 'ADMIN',
-    userId: state => state.user?.id
+    userId: state => state.user?.id,
+    isAuthenticated: state => state.user !== null
   },
 
   actions: {
     async login(email: string, password: string) {
       // Find user in mock data
-      const user = users.find(u => u.email === email && u.password === password)
-
-      if (!user) {
+      const foundUser = users.find(u => u.email === email && u.password === password)
+      if (!foundUser) {
         throw new Error('Invalid email or password')
       }
 
-      // Set user state
-      this.user = user
-      this.isAuthenticated = true
+      const { password: _, ...user } = foundUser
+      const cookie = useCookie<User | null>('user', { watch: true })
+      cookie.value = user
 
-      // Store in localStorage for persistence
-      if (import.meta.client) {
-        localStorage.setItem('auth_user', JSON.stringify(user))
-      }
+      this.user = cookie.value
 
-      return user
+      return cookie.value
     },
 
     logout() {
       this.user = null
-      this.isAuthenticated = false
 
-      // Clear localStorage
-      if (import.meta.client) {
-        localStorage.removeItem('auth_user')
-      }
+      useCookie('user').value = null
     },
 
-    // Restore session from localStorage
-    restoreSession() {
-      if (import.meta.client) {
-        const storedUser = localStorage.getItem('auth_user')
-        if (storedUser) {
-          try {
-            this.user = JSON.parse(storedUser)
-            this.isAuthenticated = true
-          } catch (e) {
-            console.error('Failed to restore session:', e)
-            localStorage.removeItem('auth_user')
-          }
-        }
-      }
+    init() {
+      const cookie = useCookie<User | null>('user', { default: () => null, watch: true })
+      this.user = cookie.value
     }
   }
 })

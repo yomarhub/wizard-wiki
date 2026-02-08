@@ -14,6 +14,7 @@
         {{ loading ? $t('common.loading') : $t('sidebar.buttons.login') }}
       </NuxtLink>
     </template>
+    <SelectLocale />
   </div>
 </template>
 

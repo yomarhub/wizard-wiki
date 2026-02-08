@@ -56,8 +56,8 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     defaultLocale: 'en',
     locales: [
-      { code: 'en', files: ['en/common.json', 'en/index.json', 'en/sidebar.json', 'en/characters.json'], name: 'English' },
-      { code: 'fr', files: ['fr/common.json', 'fr/index.json', 'fr/sidebar.json', 'fr/characters.json'], name: 'Français' }
+      { code: 'en', files: ['en/common.json', 'en/index.json', 'en/sidebar.json', 'en/characters.json', 'en/login.json'], name: 'English' },
+      { code: 'fr', files: ['fr/common.json', 'fr/index.json', 'fr/sidebar.json', 'fr/characters.json', 'fr/login.json'], name: 'Français' }
     ]
   }
 })
