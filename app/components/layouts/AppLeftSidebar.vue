@@ -8,19 +8,17 @@
         </div>
       </slot>
     </div>
-    <div>
-      <slot name="nav">
-        <SidebarBlock title="main-navigation">
-          <nav class="flex flex-col">
-            <NavButton to="/" icon="🔮">{{ $t('sidebar.category.overview') }}</NavButton>
-            <NavButton to="/characters" icon="👥">{{ $t('sidebar.category.characters') }}</NavButton>
-            <NavButton to="/spells" icon="🪄">{{ $t('sidebar.category.spells') }}</NavButton>
-            <NavButton to="/articles" icon="📜">{{ $t('sidebar.category.daily-prophet') }}</NavButton>
-            <NavButton v-if="authStore.isAdmin" to="/dashboard" icon="🏰">{{ $t('sidebar.category.ministry-hub') }}</NavButton>
-          </nav>
-        </SidebarBlock>
-      </slot>
-    </div>
+    <slot name="nav">
+      <SidebarBlock title="main-navigation">
+        <nav class="flex flex-col">
+          <NavButton to="/" icon="🔮">{{ $t('sidebar.category.overview') }}</NavButton>
+          <NavButton to="/characters" icon="👥">{{ $t('sidebar.category.characters') }}</NavButton>
+          <NavButton to="/spells" icon="🪄">{{ $t('sidebar.category.spells') }}</NavButton>
+          <NavButton to="/articles" icon="📜">{{ $t('sidebar.category.daily-prophet') }}</NavButton>
+          <NavButton v-if="authStore.isAdmin" to="/dashboard" icon="🏰">{{ $t('sidebar.category.ministry-hub') }}</NavButton>
+        </nav>
+      </SidebarBlock>
+    </slot>
     <div v-if="$slots['middle']">
       <slot name="middle">
         <SidebarBlock v-if="route.path === '/characters'" title="filters">
