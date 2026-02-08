@@ -1,7 +1,13 @@
 export const useCharacterFilter = () => {
   const STORAGE_KEY = 'character-filters'
 
-  const defaultFilters = Object.fromEntries(['name', 'alternate_names', 'species', 'gender', 'house', 'dateOfBirth', 'yearOfBirth', 'wizard', 'ancestry', 'eyeColour', 'hairColour', 'wand', 'patronus', 'hogwartsStudent', 'hogwartsStaff', 'actor', 'alternate_actors', 'alive', 'image'].map(key => [key, null]))
+  const defaultFilters = Object.fromEntries(
+    [
+      ['name', 'alternate_names', 'gender', 'house', 'species', 'ancestry'].map(key => [key, undefined as string | undefined]),
+      ['wizard', 'hogwartsStudent', 'hogwartsStaff', 'alive', 'image'].map(key => [key, undefined as boolean | undefined]),
+      ['dateOfBirth', 'yearOfBirth', 'eyeColour', 'hairColour', 'wand', 'patronus', 'actor', 'alternate_actors'].map(key => [key, undefined])
+    ].flat()
+  )
   const filters = useState(() => defaultFilters)
   onMounted(() => {
     const savedData = localStorage.getItem(STORAGE_KEY)

@@ -34,7 +34,7 @@
 @layer base {
   /* Dynamic Backgrounds using your White/Grey scales */
   :root {
-    --ui-bg: var(--color-white-400); /* Light: Parchment */
+    --ui-bg: var(--color-grey-700); /* Light: Parchment */
     --ui-text: var(--color-ink-tertiary);
   }
 

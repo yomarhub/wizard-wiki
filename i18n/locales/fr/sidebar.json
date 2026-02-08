@@ -22,6 +22,12 @@
       "signup": "S'inscrire",
       "profile": "Profil",
       "settings": "Paramètres"
+    },
+    "spells": {
+      "filter-title": "Filtrer les Sorts",
+      "search-placeholder": "Rechercher un sort...",
+      "effect-placeholder": "Rechercher par effet...",
+      "clear": "Effacer les Filtres"
     }
   }
 }

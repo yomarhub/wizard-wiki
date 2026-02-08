@@ -2,27 +2,18 @@
   <section class="flex flex-col gap-3 p-4 bg-slate-900/40 border border-slate-800 rounded-2xl">
     <h3 class="text-lg font-serif text-yellow-500 mb-2">Filter Characters</h3>
 
-    <UInput v-model="filters.name as string" placeholder="Search by name..." icon="i-lucide-search" />
+    <UInputMenu v-model="filters.name" placeholder="Search by name..." icon="i-lucide-search" />
+    <UInputMenu v-model="filters.house" :items="houses" placeholder="Select house" clear value-key="value" />
+    <UInputMenu v-model="filters.species" :items="species" placeholder="Select species" clear value-key="value" />
+    <UInputMenu v-model="filters.ancestry" :items="ancestries" placeholder="Select ancestry" clear value-key="value" />
 
-    <USelect v-model="filters.house" :options="houses" placeholder="Select house" />
+    <USwitch v-model="filters.wizard" label="Wizard" />
+    <USwitch v-model="filters.hogwartsStudent" label="Hogwarts Student" />
+    <USwitch v-model="filters.hogwartsStaff" label="Staff" />
+    <USwitch v-model="filters.alive" label="Alive" />
+    <USwitch v-model="filters.image" label="Has Image Only" />
 
-    <USelect v-model="filters.species" :options="species" placeholder="Select species" />
-
-    <USelect v-model="filters.ancestry" :options="ancestries" placeholder="Select ancestry" />
-
-    <div class="flex gap-2">
-      <UCheckbox v-model="filters.wizard as boolean" label="Wizard" />
-      <UCheckbox v-model="filters.hogwartsStudent as boolean" label="Hogwarts Student" />
-    </div>
-
-    <div class="flex gap-2">
-      <UCheckbox v-model="filters.hogwartsStaff as boolean" label="Staff" />
-      <UCheckbox v-model="filters.alive as boolean" label="Alive" />
-    </div>
-
-    <UCheckbox v-model="filters.image as boolean" label="Has Image Only" />
-
-    <UButton class="mt-2" color="red" variant="soft" @click="clearFilters">
+    <UButton class="mt-2" color="error" variant="soft" @click="clearFilters">
       <UIcon name="i-lucide-x" class="mr-2" />
       Clear Filters
     </UButton>
@@ -32,9 +23,18 @@
 <script setup lang="ts">
 const { filters, clearFilters } = useCharacterFilter()
 
-const houses = ref(['Gryffindor', 'Slytherin', 'Ravenclaw', 'Hufflepuff'])
-const species = ref(['human', 'half-giant', 'werewolf', 'ghost', 'house-elf', 'goblin', 'cat', 'owl'])
-const ancestries = ref(['half-blood', 'pure-blood', 'muggleborn', 'squib'])
+const houses = ['Gryffindor', 'Slytherin', 'Ravenclaw', 'Hufflepuff']
+const species = ['human', 'half-giant', 'werewolf', 'ghost', 'house-elf', 'goblin', 'cat', 'owl'].map(s => ({ label: s.charAt(0).toUpperCase() + s.slice(1), value: s }))
+const ancestries = ['half-blood', 'pure-blood', 'muggleborn', 'squib'].map(s => ({ label: s.charAt(0).toUpperCase() + s.slice(1), value: s }))
+
+// Make hogwartsStudent and hogwartsStaff mutually exclusive
+watch(() => filters.value.hogwartsStudent, (newValue) => {
+  if (newValue) filters.value.hogwartsStaff = false
+})
+
+watch(() => filters.value.hogwartsStaff, (newValue) => {
+  if (newValue) filters.value.hogwartsStudent = false
+})
 </script>
 
 <style scoped>

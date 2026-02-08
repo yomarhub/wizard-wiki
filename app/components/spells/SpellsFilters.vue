@@ -1,16 +1,12 @@
 <template>
   <section class="flex flex-col gap-3 p-4 bg-slate-900/40 border border-slate-800 rounded-2xl">
-    <h3 class="text-lg font-serif text-yellow-500 mb-2">Filter Spells</h3>
+    <h3 class="text-lg font-serif text-yellow-500 mb-2">{{ $t('sidebar.spells.filter-title') }}</h3>
 
-    <!-- <UInput v-model="filters.spell" placeholder="Search spell name..." icon="i-lucide-search" /> -->
-    <UInputMenu v-model="spellFilter" clear ignore-filter :items="spells" placeholder="Search spell name..." icon="i-lucide-search" />
-
-    <!-- <USelect v-model="filters.type" :options="spellTypes" placeholder="Select spell type" /> -->
-    <UInput v-model="filters.effect" placeholder="Search by effect..." />
-
+    <UInputMenu v-model="spellFilter" clear ignore-filter :items="spells" :placeholder="$t('sidebar.spells.search-placeholder')" icon="i-lucide-search" />
+    <UInput v-model="filters.effect" :placeholder="$t('sidebar.spells.effect-placeholder')" />
     <UButton class="mt-2" color="error" variant="soft" @click="clearFilters">
       <UIcon name="i-lucide-x" class="mr-2" />
-      Clear Filters
+      {{ $t('sidebar.spells.clear') }}
     </UButton>
   </section>
 </template>

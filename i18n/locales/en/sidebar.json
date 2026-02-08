@@ -22,6 +22,12 @@
       "signup": "Sign Up",
       "profile": "Profile",
       "settings": "Settings"
+    },
+    "spells": {
+      "filter-title": "Filter Spells",
+      "search-placeholder": "Search spell name...",
+      "effect-placeholder": "Search by effect...",
+      "clear": "Clear Filters"
     }
   }
 }

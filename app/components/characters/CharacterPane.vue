@@ -1,7 +1,7 @@
 <template>
   <div class="char-card bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden transition-all duration-300">
     <div class="h-64 overflow-hidden relative group">
-      <img v-if="character?.image" :src="character.image" :alt="character.name" class="w-full h-full object-cover">
+      <img v-if="character?.image" :src="character.image" :alt="character.name" class="w-full h-full object-cover object-top">
       <div v-else class="w-full h-full bg-slate-800 flex items-center justify-center text-6xl">👤</div>
       <div class="absolute inset-0 bg-linear-to-t from-[#0B101B] to-transparent"></div>
       <span v-if="character?.house" class="absolute bottom-3 left-3 text-[10px] font-bold uppercase px-2 py-1 border rounded" :class="houseStyles">{{ character.house }}</span>
