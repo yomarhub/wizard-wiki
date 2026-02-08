@@ -3,10 +3,11 @@
     "category": {
       "main-navigation": "Main Menu",
       "overview": "Overview",
-      "characters":"Characters",
-      "spells":"Spells",
-      "daily-prophet":"Daily Prophet",
-      "ministry-hub":"Ministry Hub"
+      "characters": "Characters",
+      "spells": "Spells",
+      "daily-prophet": "Daily Prophet",
+      "ministry-hub": "Ministry Hub",
+      "filters": "Filters"
     },
     "chat": {
       "title": "Chat",

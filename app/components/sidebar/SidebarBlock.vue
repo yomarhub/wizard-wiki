@@ -1,10 +1,10 @@
 <template>
-  <div class="">
+  <section>
     <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mb-4 ml-2">
       {{ iTitle }}
     </p>
     <slot />
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

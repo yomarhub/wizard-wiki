@@ -19,13 +19,11 @@
         </nav>
       </SidebarBlock>
     </slot>
-    <div v-if="$slots['middle']">
+    <div class="flex flex-col gap-1.5 mt-6">
       <slot name="middle">
-        <SidebarBlock v-if="route.path === '/characters'" title="filters">
-          <CharactersFilters />
-        </SidebarBlock>
-        <SidebarBlock v-else-if="route.path === '/spells'" title="filters">
-          <SpellsFilters />
+        <SidebarBlock title="filters">
+          <CharactersFilters v-if="route.path === '/characters'" />
+          <SpellsFilters v-if="route.path === '/spells'" />
         </SidebarBlock>
       </slot>
     </div>

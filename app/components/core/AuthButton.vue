@@ -35,11 +35,11 @@ const userMenuItems = computed((): DropdownMenuItem[][] => [
     slot: 'account',
     disabled: true
   }],
-  [{
-    label: 'Settings',
-    icon: 'i-lucide-settings',
-    to: '/settings'
-  }],
+  // [{
+  //   label: 'Settings',
+  //   icon: 'i-lucide-settings',
+  //   to: '/settings'
+  // }],
   [{
     label: 'Logout',
     icon: 'i-lucide-log-out',

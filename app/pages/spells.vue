@@ -32,27 +32,3 @@ onMounted(() => {
   if (spells.value) console.log('Filtered Spells:', spells.value)
 })
 </script>
-
-<style scoped>
-.font-serif {
-  font-family: 'Cinzel', serif;
-}
-
-.spell-glow:hover {
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-  border-color: #38bdf8;
-}
-
-.incantation {
-  color: #38bdf8;
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
-}
-
-.unforgivable {
-  border-color: #ef4444 !important;
-}
-
-.unforgivable:hover {
-  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
-}
-</style>
