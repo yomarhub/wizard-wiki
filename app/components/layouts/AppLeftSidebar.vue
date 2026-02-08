@@ -19,7 +19,7 @@
         </nav>
       </SidebarBlock>
     </slot>
-    <div class="flex flex-col gap-1.5 mt-6">
+    <div v-if="['/characters', '/spells'].includes(route.path)" class="flex flex-col gap-1.5 mt-6">
       <slot name="middle">
         <SidebarBlock title="filters">
           <CharactersFilters v-if="route.path === '/characters'" />
