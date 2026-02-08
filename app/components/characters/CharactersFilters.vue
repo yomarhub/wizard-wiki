@@ -1,21 +1,21 @@
 <template>
   <section class="flex flex-col gap-3 p-4 bg-slate-900/40 border border-slate-800 rounded-2xl">
-    <h3 class="text-lg font-serif text-yellow-500 mb-2">Filter Characters</h3>
+    <h3 class="text-lg font-serif text-yellow-500 mb-2">{{ $t('sidebar.characters.filter-title') }}</h3>
 
-    <UInputMenu v-model="filters.name" placeholder="Search by name..." icon="i-lucide-search" />
-    <UInputMenu v-model="filters.house" :items="houses" placeholder="Select house" clear value-key="value" />
-    <UInputMenu v-model="filters.species" :items="species" placeholder="Select species" clear value-key="value" />
-    <UInputMenu v-model="filters.ancestry" :items="ancestries" placeholder="Select ancestry" clear value-key="value" />
+    <UInput v-model="filters.name" :placeholder="$t('sidebar.characters.search-placeholder')" icon="i-lucide-search" />
+    <UInputMenu v-model="filters.house" :items="houses" :placeholder="$t('sidebar.characters.house-placeholder')" clear value-key="value" />
+    <UInputMenu v-model="filters.species" :items="species" :placeholder="$t('sidebar.characters.species-placeholder')" clear value-key="value" />
+    <UInputMenu v-model="filters.ancestry" :items="ancestries" :placeholder="$t('sidebar.characters.ancestry-placeholder')" clear value-key="value" />
 
-    <USwitch v-model="filters.wizard" label="Wizard" />
-    <USwitch v-model="filters.hogwartsStudent" label="Hogwarts Student" />
-    <USwitch v-model="filters.hogwartsStaff" label="Staff" />
-    <USwitch v-model="filters.alive" label="Alive" />
-    <USwitch v-model="filters.image" label="Has Image Only" />
+    <USwitch v-model="filters.wizard" :label="$t('sidebar.characters.wizard-label')" />
+    <USwitch v-model="filters.hogwartsStudent" :label="$t('sidebar.characters.student-label')" />
+    <USwitch v-model="filters.hogwartsStaff" :label="$t('sidebar.characters.staff-label')" />
+    <USwitch v-model="filters.alive" :label="$t('sidebar.characters.alive-label')" />
+    <USwitch v-model="filters.image" :label="$t('sidebar.characters.image-label')" />
 
     <UButton class="mt-2" color="error" variant="soft" @click="clearFilters">
       <UIcon name="i-lucide-x" class="mr-2" />
-      Clear Filters
+      {{ $t('sidebar.characters.clear') }}
     </UButton>
   </section>
 </template>

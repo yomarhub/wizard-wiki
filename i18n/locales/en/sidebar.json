@@ -28,6 +28,19 @@
       "search-placeholder": "Search spell name...",
       "effect-placeholder": "Search by effect...",
       "clear": "Clear Filters"
+    },
+    "characters": {
+      "filter-title": "Filter Characters",
+      "search-placeholder": "Search by name...",
+      "house-placeholder": "Select house",
+      "species-placeholder": "Select species",
+      "ancestry-placeholder": "Select ancestry",
+      "wizard-label": "Wizard",
+      "student-label": "Hogwarts Student",
+      "staff-label": "Hogwarts Staff",
+      "alive-label": "Alive",
+      "image-label": "Has Image Only",
+      "clear": "Clear Filters"
     }
   }
 }

@@ -28,6 +28,19 @@
       "search-placeholder": "Rechercher un sort...",
       "effect-placeholder": "Rechercher par effet...",
       "clear": "Effacer les Filtres"
+    },
+    "characters": {
+      "filter-title": "Filtrer les Personnages",
+      "search-placeholder": "Rechercher par nom...",
+      "house-placeholder": "Sélectionnez une maison",
+      "species-placeholder": "Sélectionnez une espèce",
+      "ancestry-placeholder": "Sélectionnez une ascendance",
+      "wizard-label": "Sorcier",
+      "student-label": "Étudiant de Poudlard",
+      "staff-label": "Personnel de Poudlard",
+      "alive-label": "Vivant",
+      "image-label": "Avec Image Uniquement",
+      "clear": "Effacer les Filtres"
     }
   }
 }

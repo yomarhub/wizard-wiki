@@ -34,13 +34,17 @@
 @layer base {
   /* Dynamic Backgrounds using your White/Grey scales */
   :root {
-    --ui-bg: var(--color-grey-700); /* Light: Parchment */
+    --ui-bg: var(--color-white-400); /* Light: Parchment */
     --ui-text: var(--color-ink-tertiary);
   }
 
   .dark {
     --ui-bg: #0b101b; /* Dark: Ministry Blue */
     --ui-text: var(--color-white-400);
+  }
+
+  body {
+    background-color: var(--color-grey-700);
   }
 }
 
